@@ -63,11 +63,8 @@ h1 {
 
 .choosen__img--grow {
     flex-grow: 2;
-    border-radius: 20px !important;
-    -webkit-border-radius: 20px !important;
-    -moz-border-radius: 20px !important;
-    -ms-border-radius: 20px !important;
-    -o-border-radius: 20px !important;
+    animation: slowAnimation 2s ease-in-out;
+    -webkit-animation: slowAnimation 2s ease-in-out;
 }
 
 .choosen__img--grow img {
@@ -80,11 +77,9 @@ h1 {
 }
 
 .slider-icons {
-
     position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: red;
 }
 
 .arrow-left,
@@ -98,14 +93,14 @@ h1 {
 .arrow-left,
 .arrow-up {
     position: absolute;
-    left: 10px;
+    left: 5px;
     top: 50%;
 }
 
 .arrow-right,
 .arrow-down {
     position: absolute;
-    right: 10px;
+    right: 5px;
     bottom: 50%;
     transform: translateY(100%);
     -webkit-transform: translateY(100%);
@@ -174,5 +169,26 @@ h1 {
     .arrow-down,
     .arrow-up {
         display: block;
+    }
+}
+
+
+@media (max-width:25em) {
+    .container {
+        padding: 0 2.4rem;
+    }
+
+    .images-slider {
+        padding: 0 1.4rem;
+    }
+}
+
+@keyframes slowAnimation {
+    from {
+        flex-grow: 0;
+    }
+
+    to {
+        flex-grow: 2;
     }
 }
