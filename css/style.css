@@ -48,6 +48,11 @@ h1 {
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+    transition: flex-grow 2s;
+    -webkit-transition: flex-grow 2s;
+    -moz-transition: flex-grow 2s;
+    -ms-transition: flex-grow 2s;
+    -o-transition: flex-grow 2s;
 }
 
 .img-box img {
@@ -59,12 +64,11 @@ h1 {
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+
 }
 
 .choosen__img--grow {
     flex-grow: 2;
-    animation: slowAnimation 2s ease-in-out;
-    -webkit-animation: slowAnimation 2s ease-in-out;
 }
 
 .choosen__img--grow img {
@@ -171,15 +175,5 @@ h1 {
 
     .images-slider {
         padding: 0 1.4rem;
-    }
-}
-
-@keyframes slowAnimation {
-    from {
-        flex-grow: 0;
-    }
-
-    to {
-        flex-grow: 2;
     }
 }
